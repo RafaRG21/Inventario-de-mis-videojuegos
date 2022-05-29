@@ -35,10 +35,10 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"> <i class="bi bi-joystick"></i>Videojuegos </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="index.php?vista=product_new">Nuevo </a>
-          <a class="navbar-item" href="index.php?vista=product_list">Lista </a>
-          <a class="navbar-item" href="index.php?vista=product_category">Por categorías </a>
-          <a class="navbar-item" href="index.php?vista=product_search">Buscar</a>
+          <a class="navbar-item" href="index.php?vista=videogame_new">Nuevo </a>
+          <a class="navbar-item" href="index.php?vista=videogame_list">Lista </a>
+          <a class="navbar-item" href="index.php?vista=videogame_category">Por categorías </a>
+          <a class="navbar-item" href="index.php?vista=videogame_search">Buscar</a>
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 <?php
     $modulo_buscador = limpiar_cadena($_POST['modulo_buscador']);
 
-    $modulos = ['usuario','categoria','producto'];
+    $modulos = ['usuario','categoria','videojuego'];
     if(in_array($modulo_buscador,$modulos)){
 
         $modulos_url = [
             "usuario"=>"user_search",
             "categoria"=>"category_search",
-            "producto"=>"product_search"
+            "videojuego"=>"videogame_search"
         ];
 
         $modulos_url = $modulos_url[$modulo_buscador];
@@ -51,7 +51,7 @@
 		echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrió un error inesperado!</strong><br>
-                No podemos procesar la petición
+                No podemos procesar la petición aaaaaa
             </div>
         ';
 	}
