@@ -56,7 +56,7 @@
                         <td>'.$contador.'</td>
                         <td>'.$rows["$tablas[$pos]_nombre"].'</td>
                         <td>
-                            <a href="index.php?vista=product_category&category_id='.$rows["id_$tablas[$pos]"].'&category_table='.$tablas[$pos].'" class="button is-link is-rounded is-small">Ver videojuegos</a>
+                            <a href="index.php?vista=videogame_category&category_id='.$rows["id_$tablas[$pos]"].'&category_table='.$tablas[$pos].'" class="button is-link is-rounded is-small">Ver videojuegos</a>
                         </td>
                         <td>
                             <a href="index.php?vista=category_update&category_id_up='.$rows["id_$tablas[$pos]"].'&category_table='.$tablas[$pos].'" class="button is-success is-rounded is-small">Actualizar</a>
@@ -156,7 +156,7 @@
                     <td>'.$contador.'</td>
                     <td>'.$rows['genero_nombre'].'</td>
                     <td>
-                        <a href="index.php?vista=product_category&category_id='.$rows['id_genero'].'&category_table=genero" class="button is-link is-rounded is-small">Ver videojuegos</a>
+                        <a href="index.php?vista=videogame_category&category_id='.$rows['id_genero'].'&category_table=genero" class="button is-link is-rounded is-small">Ver videojuegos</a>
                     </td>
                     <td>
                         <a href="index.php?vista=category_update&category_id_up='.$rows['id_genero'].'&category_table=genero" class="button is-success is-rounded is-small">Actualizar</a>
@@ -208,7 +208,7 @@
                         <td>'.$contador.'</td>
                         <td>'.$rows['plataforma_nombre'].'</td>
                         <td>
-                            <a href="index.php?vista=product_category&category_id='.$rows['id_plataforma'].'&category_table=plataforma" class="button is-link is-rounded is-small">Ver videojuegos</a>
+                            <a href="index.php?vista=videogame_category&category_id='.$rows['id_plataforma'].'&category_table=plataforma" class="button is-link is-rounded is-small">Ver videojuegos</a>
                         </td>
                         <td>
                             <a href="index.php?vista=category_update&category_id_up='.$rows['id_plataforma'].'&category_table=plataforma" class="button is-success is-rounded is-small">Actualizar</a>
@@ -266,7 +266,7 @@
                     <td>'.$contador.'</td>
                     <td>'.$rows['franquicia_nombre'].'</td>
                     <td>
-                        <a href="index.php?vista=product_category&category_id='.$rows['id_franquicia'].'&category_table=franquicia" class="button is-link is-rounded is-small">Ver videojuegos</a>
+                        <a href="index.php?vista=videogame_category&category_id='.$rows['id_franquicia'].'&category_table=franquicia" class="button is-link is-rounded is-small">Ver videojuegos</a>
                     </td>
                     <td>
                         <a href="index.php?vista=category_update&category_id_up='.$rows['id_franquicia'].'&category_table=franquicia" class="button is-success is-rounded is-small">Actualizar</a>
@@ -319,7 +319,7 @@
                     <td>'.$rows['esrb'].'</td>
                     <td>'.$rows['clasificacion_edad'].'</td>
                     <td>
-                        <a href="index.php?vista=product_category&category_id='.$rows['id_clasificacion'].'&category_table=clasificacion" class="button is-link is-rounded is-small">Ver videojuegos</a>
+                        <a href="index.php?vista=videogame_category&category_id='.$rows['id_clasificacion'].'&category_table=clasificacion" class="button is-link is-rounded is-small">Ver videojuegos</a>
                     </td>
                     <td>
                         <a href="index.php?vista=category_update&category_id_up='.$rows['id_clasificacion'].'&category_table=clasificacion" class="button is-success is-rounded is-small">Actualizar</a>

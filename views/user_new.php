@@ -22,6 +22,14 @@
         <div class="columns">
             <div class="column">
             <div class="control">
+                <label>Privilegios</label>
+                <input type="text" class="input" name="usuario_privilegios" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required>
+            </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+            <div class="control">
                 <label>Usuario</label>
                 <input type="text" class="input" name="usuario_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required>
             </div>

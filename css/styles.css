@@ -19,3 +19,6 @@ body, html{
 .form-inline{
     display: inline-flex;
 }
+#esrb,#edad{
+    display: none;
+}

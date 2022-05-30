@@ -41,7 +41,7 @@
     </div>
     <?php
             # Eliminar videojuego #
-            if(isset($_GET['product_id_del'])){
+            if(isset($_GET['videogame_id_del'])){
                 require_once "./php/videojuego_eliminar.php";
             }
 
@@ -54,10 +54,9 @@
                 }
             }
 
-            $categoria_id = (isset($_GET['category_id'])) ? $_GET['category_id'] : 0;
 
             $pagina=limpiar_cadena($pagina);
-            $url="index.php?vista=product_search&page="; /* <== */
+            $url="index.php?vista=videogame_search&page="; /* <== */
             $registros=15;
             $busqueda=$_SESSION['busqueda_videojuego']; /* <== */
 

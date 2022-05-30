@@ -2,7 +2,6 @@
     # ALMACENAR DATOS
     $category_tabla = limpiar_cadena($_GET['category_table']);
     $category_id_del = limpiar_cadena($_GET['category_id_del']);
-    echo $category_tabla;
     #VERIFICAR CATEGORIA
     $check_categoria=conexion();
     $check_categoria=$check_categoria->query("SELECT id_$category_tabla FROM $category_tabla WHERE id_$category_tabla='$category_id_del'");

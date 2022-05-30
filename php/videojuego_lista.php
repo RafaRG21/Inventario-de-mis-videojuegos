@@ -34,7 +34,18 @@
                     ORDER BY v.videojuego_nombre
                     ASC LIMIT $inicio,$registros;";
     }elseif($categoria_id>0){
-		$consulta="SELECT SQL_CALC_FOUND_ROWS $campos FROM videojuego INNER JOIN categoria ON videojuego.categoria_id=categoria.categoria_id INNER JOIN usuario ON producto.usuario_id=usuario.usuario_id WHERE producto.categoria_id='$categoria_id' ORDER BY producto.producto_nombre ASC LIMIT $inicio,$registros";
+		$consulta="SELECT SQL_CALC_FOUND_ROWS * 
+					FROM videojuego 
+					INNER JOIN clasificacion 
+        			ON clasificacion_id=id_clasificacion 
+                    INNER JOIN plataforma 
+                    ON plataforma_id=id_plataforma
+                    INNER JOIN genero 
+                    ON genero_id=id_genero
+                    INNER JOIN franquicia 
+                    ON franquicia_id=id_franquicia
+					WHERE ".$categoria_tabla."_id = $categoria_id
+					ORDER BY videojuego_nombre ASC LIMIT $inicio,$registros";
 	}else{
         $consulta ="SELECT SQL_CALC_FOUND_ROWS $campos
                     FROM videojuego v
@@ -46,7 +57,9 @@
                     ON v.genero_id=g.id_genero
                     INNER JOIN franquicia f
                     ON v.franquicia_id=f.id_franquicia
-        ";
+					ORDER BY v.videojuego_nombre 
+					ASC LIMIT $inicio,$registros
+      			  ";
 	}
     $conexion=conexion();
 
@@ -70,7 +83,7 @@
 			            if(is_file("./img/games/".$rows['videojuego_img'])){
 			            	$tabla.='<img src="./img/games/'.$rows['videojuego_img'].'">';
 			            }else{
-			            	$tabla.='<img src="./img/game.png">';
+			            	$tabla.='<img src="./img/game.jpg">';
 			            }
 			   $tabla.='</p>
 			        </figure>

@@ -56,7 +56,7 @@
 
             $pagina=limpiar_cadena($pagina);
             $url="index.php?vista=category_search&page="; /* <== */
-            $registros=6;
+            $registros=15;
             $busqueda=$_SESSION['busqueda_categoria']; /* <== */
 
             # Paginador categoria #
