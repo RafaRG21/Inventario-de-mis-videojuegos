@@ -37,15 +37,46 @@
 				  	    <input class="input" type="text" name="usuario_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required value="<?php echo $datos['usuario_nombre']; ?>" >
 				    </div>
 		  	    </div>
-		    </div>
-
-            <div class="columns">
-                <div class="column">
+                  <div class="column">
                     <div class="control">
                         <label>Usuario</label>
                         <input class="input" type="text" name="usuario_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required value="<?php echo $datos['usuario_usuario']; ?>" >
                     </div>
                 </div>
+		    </div>
+
+            <div class="columns">
+                <?php if($id!=$_SESSION['id']) {?>
+                <div class="column">
+                    <label>Privilegios</label><br>
+                    <div class="select is-rounded">
+                        <div class="control">
+                            <select name="usuario_privilegios" >
+                                <?php
+                                    $tipo = conexion();
+                                    $tip = $tipo->query("SELECT id_usuarios, tipoUsuario_id, tipo_usuario 
+                                                        FROM usuarios
+                                                        inner join tipousuario
+                                                        on tipoUsuario_id=id_TipoUsuario
+                                                        where id_usuarios=".$id."");
+                                    $type = $tip->fetch();
+                                    echo"<option value='".$type["tipoUsuario_id"]."' selected=''>".$type['tipo_usuario']."</option>";
+                                    $tipouser=conexion();
+                                    $tipouser=$tipouser->query("SELECT * FROM tipousuario WHERE id_TipoUsuario<>".$type['tipoUsuario_id'].";");
+                                    if($tipouser->rowCount()>0){
+                                        $tipouser=$tipouser->fetchAll();
+                                        foreach($tipouser as $row){
+                                            echo '<option value="'.$row['id_TipoUsuario'].'" >'.$row['tipo_usuario'].'</option>';
+                                        }
+                                    }
+                                    $tipouser=null;
+                                    $tipo = null;
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <?php }?>
                 <div class="column">
                     <div class="control">
                         <label>Email</label>
@@ -97,7 +128,7 @@
     </div>
     <?php 
 		}else{
-			include "./inc/error_alert.php";
+			include "./template/error_alert.php";
 		}
 		$check_usuario=null;
 	?>

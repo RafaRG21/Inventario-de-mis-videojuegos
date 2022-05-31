@@ -21,10 +21,26 @@
         </div>
         <div class="columns">
             <div class="column">
-            <div class="control">
-                <label>Privilegios</label>
-                <input type="text" class="input" name="usuario_privilegios" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required>
-            </div>
+                <div class="control">
+                    <label>Privilegios</label><br>
+                    <div class="select is-rounded">
+                        <select name="usuario_privilegios" >
+                            <option value="" selected="" >Seleccione una opción</option>
+                            <?php
+                                include_once "./php/main.php";
+                                $tipouser=conexion();
+                                $tipouser=$tipouser->query("SELECT * FROM tipousuario;");
+                                if($tipouser->rowCount()>0){
+                                    $tipouser=$tipouser->fetchAll();
+                                    foreach($tipouser as $row){
+                                    echo '<option value="'.$row['id_TipoUsuario'].'" >'.$row['tipo_usuario'].'</option>';
+                                    }
+                                }
+                                $tipouser=null;
+                                ?>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="columns">

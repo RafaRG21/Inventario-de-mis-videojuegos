@@ -5,12 +5,13 @@
     $nombre = limpiar_cadena($_POST['usuario_nombre']);
     $apellido = limpiar_cadena($_POST['usuario_apellido']);
     $usuario = limpiar_cadena($_POST['usuario_usuario']);
+    $privilegios = limpiar_cadena($_POST['usuario_privilegios']);
     $email = limpiar_cadena($_POST['usuario_email']);
     $clave_1 = limpiar_cadena($_POST['usuario_clave_1']);
     $clave_2 = limpiar_cadena($_POST['usuario_clave_2']);
 
     #verificando campos obligatorios
-    if($nombre==""||$apellido==""||$usuario==""||$email==""||$clave_1==""||$clave_2==""){
+    if($nombre==""||$apellido==""||$usuario==""||$email==""||$clave_1==""||$clave_2==""||$privilegios==""){
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrió un error inesperado!</strong><br>
@@ -105,12 +106,13 @@
 
     #GUARDANDO LOS DATOS A LA DB
     $guardar_usuario = conexion();
-    $guardar_usuario = $guardar_usuario->prepare("INSERT INTO usuarios(usuario_nombre,usuario_usuario,usuario_correo,usuario_contrasena) VALUES(:nombre,:usuario,:correo,:clave);");
+    $guardar_usuario = $guardar_usuario->prepare("INSERT INTO usuarios(usuario_nombre,usuario_usuario,usuario_correo,usuario_contrasena,tipoUsuario_id) VALUES(:nombre,:usuario,:correo,:clave,:privilegios);");
     $datos = [
         ":nombre"=>$nombre,
         ":usuario"=>$usuario,
         ":correo"=>$email,
-        ":clave"=>$clave
+        ":clave"=>$clave,
+        ":privilegios"=>$privilegios
     ];
     $guardar_usuario->execute($datos);
     if($guardar_usuario->rowCount()==1){

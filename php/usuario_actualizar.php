@@ -90,7 +90,7 @@
     $nombre=limpiar_cadena($_POST['usuario_nombre']);
     $usuario=limpiar_cadena($_POST['usuario_usuario']);
     $email=limpiar_cadena($_POST['usuario_email']);
-
+    $privilegios = limpiar_cadena($_POST['usuario_privilegios']);
     $clave_1=limpiar_cadena($_POST['usuario_clave_1']);
     $clave_2=limpiar_cadena($_POST['usuario_clave_2']);
 
@@ -197,7 +197,7 @@
     $actualizar_usuario=conexion();
     $actualizar_usuario=$actualizar_usuario->prepare("
         UPDATE usuarios 
-        SET usuario_nombre=:nombre,usuario_usuario=:usuario,usuario_contrasena=:clave,usuario_correo=:email 
+        SET usuario_nombre=:nombre,usuario_usuario=:usuario,usuario_contrasena=:clave,usuario_correo=:email, tipoUsuario_id=:privilegios 
         WHERE id_usuarios=:id");
 
     $marcadores=[
@@ -205,6 +205,7 @@
         ":usuario"=>$usuario,
         ":clave"=>$clave,
         ":email"=>$email,
+        ":privilegios"=>$privilegios,
         ":id"=>$id
     ];
     $actualizar_usuario->execute($marcadores);

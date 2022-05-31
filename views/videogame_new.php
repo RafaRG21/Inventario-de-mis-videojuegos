@@ -35,7 +35,7 @@
                                 if($categorias->rowCount()>0){
                                     $categorias=$categorias->fetchAll();
                                     foreach($categorias as $row){
-                                        echo '<option value="'.$row['id_clasificacion'].'" >'.$row['esrb'].' - '.$row['clasificacion_edad'].'</option>';
+                                        echo '<option value="'.$row['id_clasificacion'].'" >'.$row['esrb'].'('.$row['clasificacion_edad'].')</option>';
                                     }
                                 }
                                 $categorias=null;
