@@ -10,7 +10,7 @@
             $_GET['vista']="login";
         }
         
-        if(is_file("views/". $_GET['vista'].".php")&& $_GET['vista']!="login"&&$_GET['vista']!="404"){
+        if((is_file("views/". $_GET['vista'].".php")||is_file("views/". $_GET['vista'].".php"))&& $_GET['vista']!="login"&&$_GET['vista']!="404"){
                 
             #CERRAR SESION
             #SE VERIFICA SI EXISTE VALORES DE SESION
@@ -21,17 +21,24 @@
                     header("Location: index.php?vista=login");
                 }
             }
-
+            #VISTAS PARA ADMIN
+            if($_SESSION['tipo']==1 ){
             include 'template/navbar.php';
             include 'views/'.$_GET['vista'].'.php';
             include 'template/script.php';    
+            }else if($_SESSION['tipo']==2){
+                #VISTAS PARA USER
+                include 'template/navbar-user.php';
+                include 'user/'.$_GET['vista'].'.php';
+                include 'template/script.php';    
+
+            }
         }else{
 
             if ($_GET['vista']=="login") {
                     include "views/login.php";
             } else {
-                include "views/404.php";
-                
+                include 'views/'.$_GET['vista'].'.php';                
             }
             
         }

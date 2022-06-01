@@ -5,12 +5,9 @@
 
 <div class="container pb-6 pt-6">
     <?php
-        require_once "./php/main.php";
+        require_once "php-user/main.php";
 
-        # Eliminar producto #
-        if(isset($_GET['videogame_id_del'])){
-            require_once "./php/videojuego_eliminar.php";
-        }
+        
 
         if(!isset($_GET['page'])){
             $pagina=1;
@@ -28,6 +25,6 @@
         $busqueda="";
 
         # Paginador producto #
-        require_once "./php/videojuego_lista.php";
+        require_once "php-user/videojuego_lista.php";
     ?>
 </div>

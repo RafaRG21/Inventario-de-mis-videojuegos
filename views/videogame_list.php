@@ -1,6 +1,6 @@
 <div class="container is-fluid mb-6">
-    <h1 class="title">Mis Videojuegos</h1>
-    <h2 class="subtitle">Lista de videojuegos</h2>
+    <h1 class="title"><i class="bi bi-joystick"></i>Mis Videojuegos</h1>
+    <h2 class="subtitle"><i class="bi bi-list-ul"></i>Lista de videojuegos</h2>
 </div>
 
 <div class="container pb-6 pt-6">

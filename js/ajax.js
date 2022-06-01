@@ -2,7 +2,7 @@ const formularios_ajax = document.querySelectorAll(".FormularioAjax");
 
 function enviar_formulario_ajax(e){
     e.preventDefault();
-    let enviar = confirm("¿Quieres enviar el formulario?");
+    let enviar = confirm("¿Quieres enviar los datos?");
 
     if(enviar){
         let data = new FormData(this);

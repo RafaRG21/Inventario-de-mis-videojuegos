@@ -5,7 +5,7 @@
 
 <div class="container pb-6 pt-6">
     <?php
-        require_once "./php/main.php";
+        require_once "php-user/main.php";
 
     ?>
     <div class="columns">
@@ -32,7 +32,7 @@
                 if($query->rowCount()>0){
                     $query=$query->fetchAll();
                         foreach($query as $row){
-                            echo '<a href="index.php?vista=videogame_category&category_id='.$row['id_'.$i].'&category='.$i.'" class="button is-link is-inverted is-fullwidth">'.$row[$j].'</a>';
+                            echo '<a href="index.php?vista=videogame_category&category_id='.$row['id_'.$i].'&category_table='.$i.'" class="button is-link is-inverted is-fullwidth">'.$row[$j].'</a>';
                         
                 }
                 }else{
@@ -67,12 +67,9 @@
                         }
                     
 
-                    require_once "./php/main.php";
+                    require_once "php-user/main.php";
 
-                    # Eliminar producto #
-                    if(isset($_GET['videogame_id_del'])){
-                        require_once "./php/videojuego_eliminar.php";
-                    }
+        
 
                     if(!isset($_GET['page'])){
                         $pagina=1;
@@ -89,7 +86,7 @@
                     $busqueda="";
 
                     # Paginador producto #
-                    require_once "./php/videojuego_lista.php";
+                    require_once "php-user/videojuego_lista.php";
 
                 }else{
                     echo '<h2 class="has-text-centered title" >Seleccione una categoría para empezar</h2>';

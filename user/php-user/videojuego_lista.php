@@ -1,7 +1,6 @@
 <?php 
     $inicio = ($pagina>0) ? (($pagina * $registros)-$registros) : 0;
 	$tabla="";
-	
 
     $campos = "v.id_videojuego,v.videojuego_nombre,v.videojuego_publicacion,
     v.videojuego_img, v.clasificacion_id, v.plataforma_id, v.genero_id, v.franquicia_id, v.completado,
@@ -94,11 +93,6 @@
 			                <strong>'.$contador.' - '.$rows['videojuego_nombre'].'</strong><br>
 			                <strong>PUBLICACIÓN:</strong> '.$rows['videojuego_publicacion'].', <strong>EDAD:</strong>'.$rows['clasificacion_edad'].', <strong>PLATAFORMA:</strong> '.$rows['plataforma_nombre'].', <strong>GÉNERO:</strong> '.$rows['genero_nombre'].', <strong>FRANQUICIA:</strong> '.$rows['franquicia_nombre'].',<strong>COMPLETADO:</strong> '.$rows['completado'].'
 			              </p>
-			            </div>
-			            <div class="has-text-right">
-			                <a href="index.php?vista=videogame_img&videogame_id_up='.$rows['id_videojuego'].'" class="button is-link is-rounded is-small">Imagen</a>
-			                <a href="index.php?vista=videogame_update&videogame_id_up='.$rows['id_videojuego'].'" class="button is-success is-rounded is-small">Actualizar</a>
-			                <a href="'.$url.$pagina.'&videogame_id_del='.$rows['id_videojuego'].'" class="button is-danger is-rounded is-small">Eliminar</a>
 			            </div>
 			        </div>
 			    </article>

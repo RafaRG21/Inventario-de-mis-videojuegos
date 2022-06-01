@@ -1,6 +1,6 @@
 <div class="container is-fluid mb-6">
-	<h1 class="title">Categorías</h1>
-	<h2 class="subtitle">Nueva subcategoría</h2>
+	<h1 class="title"><i class="bi bi-bookmarks-fill"></i>Categorías</h1>
+	<h2 class="subtitle"><i class="bi bi-plus-circle"></i>Nueva subcategoría</h2>
 </div>
 <div class="container pb-6 pt-6">
     <div class="form-rest mb-6 mt-6">

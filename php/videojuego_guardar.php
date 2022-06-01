@@ -82,7 +82,7 @@
         if(mime_content_type($_FILES['videojuego_foto']['tmp_name'])!="image/jpeg" && mime_content_type($_FILES['videojuego_foto']['tmp_name'])!="image/png"&& mime_content_type($_FILES['videojuego_foto']['tmp_name'])!="image/jpeg"&& mime_content_type($_FILES['videojuego_foto']['tmp_name'])!="image/webp"){
 			echo '
 	            <div class="notification is-danger is-light">
-	                <strong>¡OcurriÓ un error inesperado!</strong><br>
+	                <strong>¡Ocurrió un error inesperado!</strong><br>
 	                La imagen que ha seleccionado es de un formato que no está permitido
 	            </div>
 	        ';

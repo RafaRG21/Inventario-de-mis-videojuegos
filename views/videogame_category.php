@@ -1,6 +1,6 @@
 <div class="container is-fluid mb-6">
-    <h1 class="title">Videojuegos</h1>
-    <h2 class="subtitle">Lista de videojuegos por categoría</h2>
+    <h1 class="title"><i class="bi bi-joystick"></i>Videojuegos</h1>
+    <h2 class="subtitle"><i class="bi bi-bookmark-star-fill"></i>Lista de videojuegos por categoría</h2>
 </div>
 
 <div class="container pb-6 pt-6">
@@ -32,7 +32,7 @@
                 if($query->rowCount()>0){
                     $query=$query->fetchAll();
                         foreach($query as $row){
-                            echo '<a href="index.php?vista=videogame_category&category_id='.$row['id_'.$i].'&category='.$i.'" class="button is-link is-inverted is-fullwidth">'.$row[$j].'</a>';
+                            echo '<a href="index.php?vista=videogame_category&category_id='.$row['id_'.$i].'&category_table='.$i.'" class="button is-link is-inverted is-fullwidth">'.$row[$j].'</a>';
                         
                 }
                 }else{

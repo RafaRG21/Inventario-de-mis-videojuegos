@@ -5,10 +5,10 @@
 
 <div class="container pb-6 pt-6">
     <?php
-            require_once "./php/main.php";
+            require_once "php-user/main.php";
 
     if(isset($_POST['modulo_buscador'])){
-        require_once './php/buscador.php';
+        require_once 'php-user/buscador.php';
     }
     if(!isset($_SESSION['busqueda_videojuego']) && empty($_SESSION['busqueda_videojuego'])){
     ?>
@@ -40,10 +40,7 @@
         </div>
     </div>
     <?php
-            # Eliminar videojuego #
-            if(isset($_GET['videogame_id_del'])){
-                require_once "./php/videojuego_eliminar.php";
-            }
+           
 
             if(!isset($_GET['page'])){
                 $pagina=1;
@@ -61,7 +58,7 @@
             $busqueda=$_SESSION['busqueda_videojuego']; /* <== */
 
             # Paginador videojuego #
-            require_once "./php/videojuego_lista.php";
+            require_once "php-user/videojuego_lista.php";
         } 
     ?>
 </div>

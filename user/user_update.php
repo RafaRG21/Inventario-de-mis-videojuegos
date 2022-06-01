@@ -4,12 +4,10 @@
 ?>
 <div class="container is-fluid mb-6">
 <?php if($id==$_SESSION['id']){ ?>
-    <h1 class="title"><i class="bi bi-person-circle" ></i>Mi cuenta</h1>
-    <h2 class="subtitle">Actualizar datos de cuenta</h2>
-<?php }else{ ?>
-    <h1 class="title"><i class="bi bi-people-fill"></i>Usuarios</h1>
-    <h2 class="subtitle">Actualizar usuario</h2>
+    <h1 class="title">Mi cuenta</h1>
+    <h2 class="subtitle">Actualizar datos de cuenta user</h2>
 <?php } ?>
+
 </div>
 
 <div class="container pb-6 pt-6">
@@ -17,7 +15,7 @@
 
     include "./template/btn_back.php";
 
-    require_once "./php/main.php";
+    require_once "php-user/main.php";
 
     #VERIFICAR USUARIO
     $check_usuario=conexion();
@@ -27,7 +25,7 @@
         $datos=$check_usuario->fetch();
     ?>
     <div class="form-rest mb-6 mt-6">
-        <form action="./php/usuario_actualizar.php" class="FormularioAjax" method="POST" autocomplete="off">
+        <form action="php-user/usuario_actualizar.php" class="FormularioAjax" method="POST" autocomplete="off">
 		    <input type="hidden" name="usuario_id" value="<?php echo $datos['id_usuarios']; ?>" required >
 
             <div class="columns">
@@ -46,47 +44,6 @@
 		    </div>
 
             <div class="columns">
-                <?php if($id!=$_SESSION['id']) {?>
-                <div class="column">
-                    <label>Privilegios</label><br>
-                    <div class="select is-rounded">
-                        <div class="control">
-                            <select name="usuario_privilegios" >
-                                <?php
-                                    $tipo = conexion();
-                                    $tip = $tipo->query("SELECT id_usuarios, tipoUsuario_id, tipo_usuario 
-                                                        FROM usuarios
-                                                        inner join tipousuario
-                                                        on tipoUsuario_id=id_TipoUsuario
-                                                        where id_usuarios=".$id."");
-                                    $type = $tip->fetch();
-                                    echo"<option value='".$type["tipoUsuario_id"]."' selected=''>".$type['tipo_usuario']."</option>";
-                                    $tipouser=conexion();
-                                    $tipouser=$tipouser->query("SELECT * FROM tipousuario WHERE id_TipoUsuario<>".$type['tipoUsuario_id'].";");
-                                    if($tipouser->rowCount()>0){
-                                        $tipouser=$tipouser->fetchAll();
-                                        foreach($tipouser as $row){
-                                            echo '<option value="'.$row['id_TipoUsuario'].'" >'.$row['tipo_usuario'].'</option>';
-                                        }
-                                    }
-                                    
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <?php }else{
-                    $tipo = conexion();
-                    $tip = $tipo->query("SELECT id_usuarios, tipoUsuario_id, tipo_usuario 
-                                        FROM usuarios
-                                        inner join tipousuario
-                                        on tipoUsuario_id=id_TipoUsuario
-                                        where id_usuarios=".$id."");
-                    $type = $tip->fetch();
-                        echo  '<input type="hidden" name="usuario_privilegios" value="'.$type["tipoUsuario_id"].'">';
-                }
-                $tipouser=null;
-                $tipo = null;?>
                 <div class="column">
                     <div class="control">
                         <label>Email</label>
@@ -115,15 +72,9 @@
 		    </div>
             <br> <br>
             <p class="has-text-centered">
-			Para actualizar los datos del usuario, ingrese su USUARIO y CONTRASEÑA con la que inició sesión
+			Para actualizar los datos del usuario, ingrese su CONTRASEÑA ACTUAL
 		    </p>
             <div class="columns">
-                <div class="column">
-                    <div class="control">
-                        <label>Usuario</label>
-                        <input class="input" type="text" name="administrador_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required >
-                    </div>
-                </div>
                 <div class="column">
                     <div class="control">
                         <label>Contraseña</label>

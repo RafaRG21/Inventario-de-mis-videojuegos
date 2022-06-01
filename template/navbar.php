@@ -17,28 +17,28 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"> <i class="bi bi-people-fill"></i>Usuarios </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="index.php?vista=user_new">Nuevo </a>
-          <a class="navbar-item" href="index.php?vista=user_list">Lista </a>
-          <a class="navbar-item" href="index.php?vista=user_search">Buscar</a>
+          <a class="navbar-item" href="index.php?vista=user_new"><i class="bi bi-person-plus-fill"></i> Nuevo </a>
+          <a class="navbar-item" href="index.php?vista=user_list"><i class="bi bi-person-lines-fill"></i>Lista </a>
+          <a class="navbar-item" href="index.php?vista=user_search"><i class="bi bi-search"></i>Buscar</a>
         </div>
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"> <i class="bi bi-bookmarks-fill"></i>Categorías </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="index.php?vista=category_new">Nuevo </a>
-          <a class="navbar-item" href="index.php?vista=category_list">Lista </a>
-          <a class="navbar-item" href="index.php?vista=category_search">Buscar</a>
+          <a class="navbar-item" href="index.php?vista=category_new"><i class="bi bi-plus-circle"></i>Nuevo </a>
+          <a class="navbar-item" href="index.php?vista=category_list"><i class="bi bi-list-ul"></i>Lista </a>
+          <a class="navbar-item" href="index.php?vista=category_search"><i class="bi bi-search"></i>Buscar</a>
         </div>
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"> <i class="bi bi-joystick"></i>Videojuegos </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="index.php?vista=videogame_new">Nuevo </a>
-          <a class="navbar-item" href="index.php?vista=videogame_list">Lista </a>
-          <a class="navbar-item" href="index.php?vista=videogame_category">Por categorías </a>
-          <a class="navbar-item" href="index.php?vista=videogame_search">Buscar</a>
+          <a class="navbar-item" href="index.php?vista=videogame_new"><i class="bi bi-plus-circle"></i>Nuevo </a>
+          <a class="navbar-item" href="index.php?vista=videogame_list"><i class="bi bi-list-ul"></i>Lista </a>
+          <a class="navbar-item" href="index.php?vista=videogame_category"><i class="bi bi-bookmark-star-fill"></i>Por categorías </a>
+          <a class="navbar-item" href="index.php?vista=videogame_search"><i class="bi bi-search"></i>Buscar</a>
         </div>
       </div>
     </div>

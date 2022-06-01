@@ -1,6 +1,6 @@
 <div class="container is-fliud">
-    <h1 class="title">Usuarios</h1>
-    <h2 class="subtitle">Lista de Usuarios</h2>
+    <h1 class="title"><i class="bi bi-people-fill"></i> Usuarios</h1>
+    <h2 class="subtitle"><i class="bi bi-person-lines-fill"></i>Lista de Usuarios</h2>
 </div>
 
 <div class="container pb-6 pt-6">

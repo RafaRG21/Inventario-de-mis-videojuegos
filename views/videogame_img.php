@@ -1,5 +1,5 @@
 <div class="container is-fluid mb-6">
-	<h1 class="title">Videojuegos</h1>
+	<h1 class="title"><i class="bi bi-joystick"></i>Videojuegos</h1>
 	<h2 class="subtitle">Actualizar imagen de videojuego</h2>
 </div>
 

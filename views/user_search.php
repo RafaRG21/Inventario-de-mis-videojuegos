@@ -1,6 +1,6 @@
 <div class="container is-fluid mb-6">
-        <h1 class="title">Usuarios</h1>
-        <h2 class="subtitle">Buscar usuario</h2>
+        <h1 class="title"><i class="bi bi-people-fill"></i>Usuarios</h1>
+        <h2 class="subtitle"><i class="bi bi-search"></i>Buscar usuario</h2>
 </div>
 
 <div class="container pb-6 pt-6">

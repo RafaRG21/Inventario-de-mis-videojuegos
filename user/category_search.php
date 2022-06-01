@@ -60,7 +60,7 @@
             $busqueda=$_SESSION['busqueda_categoria']; /* <== */
 
             # Paginador categoria #
-            require_once "./php/categoria_lista.php";
+            require_once "php-user/categoria_lista.php";
         } 
     ?>
 </div>
