@@ -36,7 +36,7 @@
     
     foreach($datos as $i=>$j){
         
-        if(!verificar_datos("[a-zA-Z0-9 ]{1,50}",$j)){
+        if(!verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚ ]{1,100}",$j)){
             echo '
                 <div class="notification is-danger is-light">
                     <strong>¡Ocurrio un error inesperado!</strong><br>

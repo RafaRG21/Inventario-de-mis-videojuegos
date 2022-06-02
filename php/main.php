@@ -2,7 +2,7 @@
 #Conexiion BD #
 
     function conexion(){
-        $db = new PDO('mysql:host=localhost:3306;dbname=dbvideogames','root','');
+        $db = new PDO('mysql:host=localhost:3306;dbname=dbvideogames','root','bobpat5269');
         return $db;
     }
 # VERIFICAR DATOS #

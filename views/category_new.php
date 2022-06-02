@@ -30,7 +30,7 @@
                 <div class="column" id="name">
                     <div class="control">
                         <label>Nombre</label>
-                        <input class="input" type="text" name="categoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" >
+                        <input class="input" type="text" name="categoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ/ ]{1,50}" maxlength="50" >
                     </div>
                 </div>
             </div>
