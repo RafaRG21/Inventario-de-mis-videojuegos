@@ -24,13 +24,13 @@
 		  	<div class="column">
 		    	<div class="control">
 					<label>Nombre del videojuego</label>
-				  	<input class="input" type="text" name="videojuego_nombre" pattern="[a-zA-Z0-9- ]{1,70}" maxlength="70" required >
+				  	<input class="input" type="text" name="videojuego_nombre" value="<?php echo $datos['videojuego_nombre']; ?>" pattern="[a-zA-Z0-9- ]{1,70}" maxlength="70" required >
 				</div>
 		  	</div>
 		  	<div class="column">
 		    	<div class="control">
 					<label>Año de publicación</label>
-				  	<input class="input" type="text" name="videojuego_anio" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required >
+				  	<input class="input" type="text" name="videojuego_anio" value="<?php echo $datos['videojuego_publicacion']; ?>" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required >
 				</div>
 		  	</div>
 		</div>
